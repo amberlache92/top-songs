@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Final</title>
+		<!-- Custom Widget Theme -->
+	<link rel="stylesheet" href="themes/eggplant/jquery-ui.css">	
+		 <!-- jquery -->
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- jquery ui library -->
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>	
+	<!-- google map api -->
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<!-- my javscript file -->
+	<script src="/final/script.js"></script>
+<style>
+ body{
+ 	background-color: #89C7FF;
+ 	color: #FAFFFD;
+ 	font-size: 18px;
+ }
+
+ a{
+ 	text-decoration: none;
+ 	color: black;
+ 	font-weight: bold;
+ }
+ div{
+ /*	margin-top: 20px;*/
+ margin-bottom: 50px;
+ 	margin-right: 10px;
+ 	float: left;
+ 	width: 30%;
+ }
+	  #map{
+	  	height: 400px;
+	  	width: 400px;
+	  	float: right;
+	  	display: none;
+	    border-radius: 50%;
+	    box-shadow: 10px 10px 10px #808080;
+	  }
+
+	/*  .overlay{
+	  	 position: absolute;
+	  	width: 100%;
+	  	height: 100vw;
+	  	z-index: 100;
+	  	top:0;
+	  	left: 0;
+	  	background-color: rgba(0,0,0,0.2);
+	  }*/
+	.ui-slider{
+		width: 250px;
+		margin-bottom: 10px;
+
+	}
+	h1{
+		text-align: center;
+		color: black;
+		font-size: 50px;
+	}
+ #selection{
+ 	 margin: 0 auto;
+ 	 width: 20%;
+
+ }
+img{
+	display: block;
+	margin:0 auto;
+
+}
+ #chosen{
+ 	text-align: center;
+ 	/*background-color: #666;*/
+ 	/*border-radius: 50%;*/
+ 	padding: 6px;
+ 	color:#666;
+ 	font-weight: bold;
+ 	height:15px;
+ 	width: 15px;
+ 	/*float: right;
+ 	margin-right: 25px;*/
+ }
+ form{
+ 	margin-left: 40px;
+ }
+
+ #song{
+ 	width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+
+ }
+ audio{
+ 	position: relative;
+ 	right: 300px;
+    top: 350px;
+ }
+</style>
+</head>
+<body>
+ <div id="map"></div>
+
+
+	
+
+ 
+   
+ <section id="selection">
+          <h1>Top songs</h1>
+ <!-- slider -->
+             <p>Choose the amount of songs you want to see .</p>
+              <div id="chosen">5</div>
+			   <div id="slider">
+			   	 
+			   </div>
+
+			 <br><br>
+			
+ 		 <form >
+		<!--     dropdown to choose country
+
+		 -->  
+		     <select name="country"id="country">
+		      <option>Select  Country</option>
+		      <option value="jp">Japan</option>
+		      <option value="es">Spain</option>
+		      <option value="fr">France</option>
+		     
+		    </select>
+		     <input type="button" id="button" value="get songs">
+		   
+		   </form>
+   
+			   
+			   
+   </section>	
+   
+   <div id="song">
+   	 
+   </div>
+     
+
+</body>
+</html>
