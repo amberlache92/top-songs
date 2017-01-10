@@ -85,6 +85,10 @@ img{
  form{
  	margin-left: 40px;
  }
+ #countryError{
+ 	color:red;
+
+ }
 
  #song{
  	width: 100%;
@@ -110,6 +114,7 @@ img{
  <section id="selection">
           <h1>Top songs</h1>
  <!-- slider -->
+
              <p>Choose the amount of songs you want to see .</p>
               <div id="chosen">5</div>
 			   <div id="slider">
@@ -117,13 +122,13 @@ img{
 			   </div>
 
 			 <br><br>
-			
+		 <span id="countryError">Please pick a country</span>
  		 <form >
 		<!--     dropdown to choose country
 
 		 -->  
 		     <select name="country"id="country">
-		      <option>Select  Country</option>
+		      <option value="select">Select  Country</option>
 		      <option value="jp">Japan</option>
 		      <option value="es">Spain</option>
 		      <option value="fr">France</option>

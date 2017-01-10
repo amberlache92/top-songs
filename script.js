@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+                $('#countryError').hide();
                 var countryCode;
                 
                 var country;
@@ -28,19 +28,24 @@ $(document).ready(function(){
                      
                            
                     $("#button").click(function () {
-             //button parses data
+                      //button used to parse data
 
                    
-                  
+                   var isValid= true;
 
-                 
+                  if($('#country').val()=="select"){      //validation to check to make sure country is selected from the dropdowm
+                     $('#countryError').show();
+                     var isValid=false;
+                  }
                 
+                  if(isValid){
                      $('#song').empty(); //in order to remove previous data
                       countryCode=$('#country').find(':selected').attr('value'); 
-                           
+                       $('#countryError').empty();
                       country= $('#country').val(); //this in order to put in our map api later to find country on map
                       number=$('#chosen').text();
                        $('#map').show();
+
                  
               // grabes the information from itunes data
                 $.get('https://itunes.apple.com/' + countryCode + '/rss/topsongs/limit='+number+ '/xml', function(data){
@@ -139,7 +144,7 @@ $(document).ready(function(){
                           });
                         });
                   });  //end of google api 
-
+} //end of validation
     //  }); //end of change funtion
         }); //end of click function
    
