@@ -94,9 +94,8 @@ img{
 
  }
  audio{
- 	position: relative;
- 	right: 300px;
-    top: 350px;
+ 	width: 250px;
+ 	margin-top:15px;
  }
 </style>
 </head>

@@ -87,7 +87,7 @@ $(document).ready(function(){
                                                
                                             $("#song").append(
                                             
-                                        "<div> Song :" + title + "<br> Artist :" + artist +  " <br>album: " + album + "<br>" +  "<img src="  + image + "> " +  "<a href= " +  link +  ">"  +' Watch Video'+ "</a>  "+ " </div>  "
+                                        "<div> Song :" + title + "<br> Artist :" + artist +  " <br>album: " + album + "<br>" +  "<img src="  + image + "> " +  "<a href= " +  link +  ">"  +' Watch Video'+ "</a>  "+ "<audio controls><source src=' " +  audioLink + "'type='audio/x-m4a'></audio> " +"</div>"
 
                                               
                                   );
