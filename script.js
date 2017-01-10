@@ -45,9 +45,10 @@ $(document).ready(function(){
                           
 
                            var songArray =$(data).find('entry');
+                           var counter=1;
 
                            songArray.each(function(){
-
+                                 
                                 var title= $(this).find("title").text(); //grab song title
                                 var artist= $(this).find("im\\:artist, artist").text(); //grab artist namee
                                 var album =$(this).find("im\\:name,name").text(); //grab album name
@@ -87,11 +88,12 @@ $(document).ready(function(){
                                                
                                             $("#song").append(
                                             
-                                        "<div> Song :" + title + "<br> Artist :" + artist +  " <br>album: " + album + "<br>" +  "<img src="  + image + "> " +  "<a href= " +  link +  ">"  +' Watch Video'+ "</a>  "+ "<audio controls><source src=' " +  audioLink + "'type='audio/x-m4a'></audio> " +"</div>"
+                                        "<div> "+ counter+ ".\n Song :" + title + "<br> Artist :" + artist +  " <br>album: " + album + "<br>" +  "<img src="  + image + "> " +  "<a href= " +  link +  ">"  +' Watch Video'+ "</a>  "+ "<audio controls><source src=' " +  audioLink + "'type='audio/x-m4a'></audio> " +"</div>"
 
                                               
                                   );
-                                        //$('#song').append(audio);    
+                                        //$('#song').append(audio);  
+                                         counter++;  
 
                                       });
                                 
