@@ -24,21 +24,24 @@ $(document).ready(function(){
         
         
               
-      
-                $("#country").change(function (){ // makes it so that the dta changes everytime you select a new option
+                //$("#country").change(function (){ // makes it so that the dta changes everytime you select a new option
+                     
+                           
+                    $("#button").click(function () {
+             //button parses data
 
-                   // $("#button").click(function () {
-                                  //button parses data
+                   
+                  
 
-
+                 
+                
                      $('#song').empty(); //in order to remove previous data
-
-                     countryCode=$('#country').find(':selected').attr('value'); 
+                      countryCode=$('#country').find(':selected').attr('value'); 
+                           
                       country= $('#country').val(); //this in order to put in our map api later to find country on map
                       number=$('#chosen').text();
                        $('#map').show();
-
-                
+                 
               // grabes the information from itunes data
                 $.get('https://itunes.apple.com/' + countryCode + '/rss/topsongs/limit='+number+ '/xml', function(data){
                            
@@ -137,7 +140,7 @@ $(document).ready(function(){
                         });
                   });  //end of google api 
 
-      }); //end of change funtion
-      //   }); //end of click function
+    //  }); //end of change funtion
+        }); //end of click function
    
 });  
